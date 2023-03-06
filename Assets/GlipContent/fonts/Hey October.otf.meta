@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7866f038f353d2249a68b52708a9d436
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hey October
+  fontNames:
+  - Hey October
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 46ac58193a4b5ec4588761a85467b746, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
