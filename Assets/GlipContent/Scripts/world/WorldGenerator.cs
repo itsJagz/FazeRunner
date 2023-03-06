@@ -66,7 +66,7 @@ public class WorldGenerator : MonoBehaviour
 
     public Vector3 get_chunk_coordinates_at(Vector3 pos)
     {
-        return (new Vector3((int)Mathf.Floor(pos.x / chunk_size), (int)Mathf.Floor(pos.y / chunk_size), (int)Mathf.Floor(pos.z / chunk_size)));
+        return (new Vector3(0, 0, (int)Mathf.Floor(pos.z / chunk_size)));
     }
 
     //Chunk Manage
@@ -75,7 +75,7 @@ public class WorldGenerator : MonoBehaviour
         if (chunks.ContainsKey(pos))
             return;
         GameObject t = Instantiate(ChunkPrefab, pos, ChunkPrefab.transform.rotation) as GameObject;
-        t.GetComponent<ChunkElement>().Init(Prefabs,seed);
+        t.GetComponent<ChunkElement>().Init();
         chunks.Add(pos, t);
     }
     void removeChunkAt(Vector3 pos)

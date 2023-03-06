@@ -18,68 +18,21 @@ public class ChunkElement : MonoBehaviour
     public bool OverLapMetod = false;
     public bool NoiseMethod = false;
     public bool StrictMethod = true;
+
+    public List<GameObject> BG;
     public List<GameObject> Obstacles;
-    public void Init(List<GameObject> Prefabs,int Seed)
+
+
+    public void Init()
     {
+        foreach (var t in BG)
+            t.SetActive(false);
+        foreach (var t in Obstacles)
+            t.SetActive(false);
 
-        if (StrictMethod)
-        {
-            var judge = Mathf.PerlinNoise(transform.position.magnitude, Seed)*100;
-            print(judge);
-            Obstacles[((int)judge) % Obstacles.Count].SetActive(true);
-            return;
-        }
-
-        var C = 0;
-        foreach (var t in stamper)
-        {
-            C++;
-            t.transform.name = C.ToString();
-
-            if (OverLapMetod)
-            {
-                if (Physics.Raycast(t.transform.position, Vector3.down, out hit, Mathf.Infinity, GroundLayer))
-                {
-                    var to = Physics.OverlapSphere(hit.point, 40f, ObstacleLayer);
-                    if (to.Length < 2)
-                    {
-                        var objToSpawn = Prefabs[Random.Range(0, Prefabs.Count)];
-                        var n = pool.Spawn(objToSpawn, hit.point, Quaternion.Euler(objToSpawn.transform.rotation.x, 90f * (int)Random.Range(0, 4), objToSpawn.transform.rotation.z));
-                        n.transform.SetParent(ChunkObjectsParent, true);
-                        n.GetComponent<AnEntity>().Id = C;
-                        ChunkObjects.Add(n);
-                    }
-                }
-            }
-            if(NoiseMethod)
-            {
-                var judge = Mathf.PerlinNoise(t.transform.position.magnitude, Seed);
-                print(judge);
-                if (judge <= 0.3f && judge >= 0.2f)
-                if (Physics.Raycast(t.transform.position, Vector3.down, out hit, Mathf.Infinity, GroundLayer))
-                {
-                    var objToSpawn = Prefabs[Random.Range(0, Prefabs.Count)];
-                    var n = pool.Spawn(objToSpawn, hit.point, Quaternion.Euler(objToSpawn.transform.rotation.x, 90f * (int)Random.Range(0, 4), objToSpawn.transform.rotation.z));
-                    n.transform.SetParent(ChunkObjectsParent, true);
-                    n.GetComponent<AnEntity>().Id = C;
-                    ChunkObjects.Add(n);
-                }
-            }
-        }
-    }
-
-    //Operational
-    [ContextMenu("MakeChunkObjects")]
-    public void MakeStamps()
-    {
-     
-    }
-    [ContextMenu("DeleteChunkObjects")]
-    public void DeletePrefabs()
-    {
-        foreach (var t in ChunkObjects)
-            pool.Despawn(t);
-        ChunkObjects.Clear();
+        BG[Random.Range(0,BG.Count)].SetActive(true);
+        Obstacles[Random.Range(0, Obstacles.Count)].SetActive(true);
+        return;
     }
 
 }
