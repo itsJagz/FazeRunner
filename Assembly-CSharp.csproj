@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.9</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.17</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.15f2</UnityVersion>
@@ -59,6 +59,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Components\FxaaComponent.cs" />
     <Compile Include="Assets\GlipContent\Scripts\pool\autodestroy.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
+    <Compile Include="Assets\Models\DrollRobots\Scripts\HitSplash.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
@@ -68,11 +69,13 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
     <Compile Include="Assets\GlipContent\Scripts\world\ChunkElement.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Models\DrollRobots\Scripts\CamHolder.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\VignetteComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\FogModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\TaaComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
+    <Compile Include="Assets\GlipContent\Scripts\Obstacles\Interactable.cs" />
     <Compile Include="Assets\GlipContent\Scripts\manager\save_mng.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\VignetteModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\GrainModel.cs" />
@@ -83,10 +86,13 @@
     <Compile Include="Assets\PostProcessing\Runtime\Components\GrainComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingContext.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
+    <Compile Include="Assets\Models\DrollRobots\Scripts\Bullet.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+    <Compile Include="Assets\GlipContent\Scripts\Obstacles\Coin.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\UserLutModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\BloomComponent.cs" />
     <Compile Include="Assets\GlipContent\Scripts\world\WorldGenerator.cs" />
+    <Compile Include="Assets\GlipContent\Scripts\Obstacles\Drone.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
     <Compile Include="Assets\GlipContent\Scripts\ui\indicator.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\UserLutComponent.cs" />
@@ -95,6 +101,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\DitheringComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+    <Compile Include="Assets\Models\DrollRobots\Scripts\Rob03Ctrl.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingComponent.cs" />
     <Compile Include="Assets\GlipContent\Scripts\manager\g_settings.cs" />
@@ -114,18 +121,16 @@
     <Compile Include="Assets\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
     <Compile Include="Assets\GlipContent\Scripts\manager\g_mng.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
-    <Compile Include="Assets\GlipContent\Scripts\Obstacles\Interactable.cs" />
-    <Compile Include="Assets\GlipContent\Scripts\Obstacles\Coin.cs" />
-    <Compile Include="Assets\Models\DrollRobots\Scripts\CamHolder.cs" />
-    <Compile Include="Assets\Models\DrollRobots\Scripts\Rob03Ctrl.cs" />
-    <Compile Include="Assets\Models\DrollRobots\Scripts\Bullet.cs" />
-    <Compile Include="Assets\Models\DrollRobots\Scripts\HitSplash.cs" />
-    <Compile Include="Assets\GlipContent\Scripts\Obstacles\Drone.cs" />
+    <Compile Include="Assets\Sci-Fi Shader Pack\Assets\ForAllRenderers\Scripts\ShadersControl.cs" />
+    <Compile Include="Assets\GlipContent\Scripts\Obstacles\StaticDanger.cs" />
+    <Compile Include="Assets\GlipContent\Scripts\Obstacles\LaneSwitch.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\GostStandart.shader" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\GostDetails.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
@@ -139,6 +144,8 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
     <None Include="Assets\PolygonSciFiCity\Shaders\Polygon_Triplanar.shader" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\Hologram.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\Outline.shader" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
@@ -147,12 +154,14 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\Displacement.shader" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\PolygonSciFiCity\Shaders\Polygon_UVScroll.shader" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\ShadersNotGlobal\Dissolve_NotGlobal.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\ACES.cginc" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
@@ -160,32 +169,45 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA.shader" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\Sci-Fi.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\ShadersNotGlobal\HologramDepthFadeDisplacement_NotGlobal.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\GostDepthFade.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\Dissolve.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\XRayOutline.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
     <None Include="Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\HologramTriplanar.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\HologramDepthFade.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Common.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\ShadersNotGlobal\Displacement_NotGlobal.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\ShadersNotGlobal\Sci-Fi_NotGlobal.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\HologramDepthFadeDisplacement.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\HologramFresnelColor.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\GostUnlit.shader" />
+    <None Include="Assets\Sci-Fi Shader Pack\Documentation\ReadMe.txt" />
     <None Include="Assets\Models\DrollRobots\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -410,9 +432,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.15f2\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.15f2\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -804,14 +823,14 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder">
       <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>

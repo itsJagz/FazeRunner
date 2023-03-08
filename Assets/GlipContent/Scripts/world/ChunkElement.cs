@@ -9,16 +9,6 @@ public class ChunkElement : MonoBehaviour
     public List<GameObject> ChunkObjects = new List<GameObject>();
     [Header("Spawn Options")]
     [Space]
-    public GameObject[] stamper;
-    public Transform ChunkObjectsParent;
-    public LayerMask GroundLayer;
-    public LayerMask ObstacleLayer;
-    RaycastHit hit;
-    [Space]
-    public bool OverLapMetod = false;
-    public bool NoiseMethod = false;
-    public bool StrictMethod = true;
-
     public List<GameObject> BG;
     public List<GameObject> Obstacles;
 
