@@ -98,7 +98,7 @@ public class PlayerMng : MonoBehaviour
     public void GetHitOnce()
     {
         anim.SetTrigger("stumble");
-      //  PlayerCam.ins.Shake(2);
+        PlayerCam.ins.Shake(2);
     }
 
     public LayerMask groundLayer;

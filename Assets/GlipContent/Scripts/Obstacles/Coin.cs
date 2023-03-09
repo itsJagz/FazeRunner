@@ -8,8 +8,7 @@ public class Coin : Interactable
     public override void Collided()
     {
         base.Collided();
-        print("Hitting");
-        PlayerCam.ins.Shake();
+       // PlayerCam.ins.Shake();
         Destroy(gameObject);
     }
 
