@@ -50,6 +50,7 @@ public class PlayerMng : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
             MoveLeft();
 
+        anim.SetBool("grounded", CheckGrounded());
 
         if (Input.GetKeyDown(KeyCode.Space) && CheckGrounded())
         {

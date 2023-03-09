@@ -56,8 +56,10 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GlipContent\Scripts\Obstacles\StaticDanger.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\FxaaComponent.cs" />
     <Compile Include="Assets\GlipContent\Scripts\pool\autodestroy.cs" />
+    <Compile Include="Assets\Sci-Fi Shader Pack\Assets\ForAllRenderers\Scripts\ShadersControl.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\Models\DrollRobots\Scripts\HitSplash.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
     <Compile Include="Assets\GlipContent\Scripts\world\ChunkElement.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\GlipContent\Scripts\Obstacles\LaneSwitch.cs" />
     <Compile Include="Assets\Models\DrollRobots\Scripts\CamHolder.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\VignetteComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
@@ -121,9 +124,6 @@
     <Compile Include="Assets\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
     <Compile Include="Assets\GlipContent\Scripts\manager\g_mng.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
-    <Compile Include="Assets\Sci-Fi Shader Pack\Assets\ForAllRenderers\Scripts\ShadersControl.cs" />
-    <Compile Include="Assets\GlipContent\Scripts\Obstacles\StaticDanger.cs" />
-    <Compile Include="Assets\GlipContent\Scripts\Obstacles\LaneSwitch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sci-Fi Shader Pack\Assets\StandartRender\Shaders\GostStandart.shader" />
